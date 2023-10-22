@@ -1,0 +1,25 @@
+{
+  "short_name": "TEXT SAVER",
+  "name": "TEXT SAVER",
+  "start_url": "./",
+  "display": "standalone",
+  "description": "PWA",
+  "theme_color": "#ffa500",
+  "background_color": "#ffa500",
+  "orientation": "any",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./icons/logo.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "./icons/splash.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable any"
+    }
+  ]
+}

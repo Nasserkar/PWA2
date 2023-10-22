@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="description"
+      content="The quickest way to save text files online"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-starturl" content="/" />
+    <meta name="theme-color" content="##ffa500" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./icons/logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./icons/logo.png" type="image/x-icon" />
+    <script defer src="./script.js"></script>
+    <title>TEXT EDITOR</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="b">
+        <input type="text" value="index.txt" placeholder="index.txt" id="ext" />
+        <button id="save">save</button>
+        <input type="file" id="fileInput">
+        <label for="fileInput">Open</label>
+      </div>
+      <div id="pad">
+          <label for="information" id="la">he</label>
+        <textarea spellcheck="false" id="information" name="information"></textarea>
+      </div>
+    </div>
+    <script defer>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then((reg) => {
+            })
+            .catch((error) =>
+              console.log(`%cFailure: ${error}`, "color:orangered")
+            );
+        });
+      }
+    </script>
+    <script defer src="./sw.js"></script>
+  </body>
+</html>
